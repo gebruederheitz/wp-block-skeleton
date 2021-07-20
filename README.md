@@ -29,6 +29,7 @@ one without fuss):
 Don't forget to:
  - delete this section and complete the Readme
  - change the package name in `package.json`
+ - remove the hash from the script name at `pkg.scripts.#prepublishOnly`
  - change the repository URLs in `package.json` (`repository.url`, `bugs`, `homepage`)
  - check the licence
  - check whether you need all the dependencies
