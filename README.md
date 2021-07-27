@@ -1,4 +1,4 @@
-# WP Block: Video Overlay
+# WP Block: Skeleton
 
 _A skeleton for a quick gutenberg block module setup._
 
