@@ -1,29 +1,26 @@
 import { blocks, i18n } from 'wp';
 
-import { attributes as defaultAttributes } from './attributes';
+import defaultAttributes from './attributes.json';
 import { edit as defaultEdit } from './edit';
 import { save as defaultSave } from './save';
-import { slideshowChildren, DEFAULT_ALLOWED_CHILDREN } from './utils/children';
+import meta from './meta.json';
 
 const { registerBlockType } = blocks;
 const { __ } = i18n;
 
 export function register(options = {}) {
     const {
-        category = 'widgets',
+        category = meta.category,
         icon = 'file',
         edit = defaultEdit,
         save = defaultSave,
         attributes = defaultAttributes,
     } = options;
 
-    registerBlockType('ghwp/block', {
-        title: __('Block name', 'ghwp'),
+    registerBlockType(meta.name, {
+        title: __(meta.prettyName, 'ghwp'),
         icon,
-        description: __(
-            'A short description of what the block does.',
-            'ghwp'
-        ),
+        description: __(meta.description, 'ghwp'),
         category,
         attributes,
         edit,
@@ -35,6 +32,4 @@ export {
     defaultEdit as edit,
     defaultSave as save,
     defaultAttributes as attributes,
-    slideshowChildren,
-    DEFAULT_ALLOWED_CHILDREN,
 };

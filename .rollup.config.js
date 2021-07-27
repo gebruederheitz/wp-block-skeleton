@@ -1,6 +1,7 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import json from '@rollup/plugin-json';
 
 const babelConfig = {
     babelrc: false,
@@ -39,6 +40,7 @@ export default [
         },
         plugins: [
             resolve(),
+            json(),
             babel(babelConfig),
             commonjs(),
         ],

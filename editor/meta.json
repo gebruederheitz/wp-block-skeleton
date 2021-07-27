@@ -1,0 +1,7 @@
+{
+  "name": "ghwp/block",
+  "prettyName": "Block name",
+  "description": "A short description of what the block does.",
+  "category": "widgets",
+  "requiredAttributes": []
+}
